@@ -1,91 +1,130 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="NextBestPath 在五个 AiMDoom Hard 场景中的别人方法与我们方法探索视频对比。">
-  <title>NBP 探索结果对比</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="All Roads Lead to Rome: Flow-driven Multi-Anchor Exploration for Open-Environment Active 3D Mapping. Project overview, architecture and exploration videos.">
+  <meta name="theme-color" content="#ffffff">
+  <title>All Roads Lead to Rome | Active 3D Mapping</title>
+  <link rel="stylesheet" href="static/css/bootstrap-4.4.1.css">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/fonts.css">
+  <link rel="stylesheet" href="static/css/project.css">
+  <script src="static/js/project.js" defer></script>
 </head>
 <body>
-  <div class="page-shell">
-    <header class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">NextBestPath · AiMDoom Hard</p>
-        <h1>同场景探索结果对比</h1>
-        <p class="intro">左侧为别人的方法，右侧为我们的方法。每组使用相同场景、相同相机视角与 400 步探索预算。</p>
-      </div>
-      <div class="summary" aria-label="实验参数">
-        <div><strong>5</strong><span>Hard 场景</span></div>
-        <div><strong>400</strong><span>探索步数</span></div>
-        <div><strong>25s</strong><span>视频时长</span></div>
-      </div>
-      <div class="global-controls" aria-label="全部视频控制">
-        <button type="button" class="button button-primary" id="play-all">全部同步播放</button>
-        <button type="button" class="button" id="pause-all">全部暂停</button>
-        <button type="button" class="button" id="reset-all">全部归零</button>
-      </div>
-    </header>
-
-    <main class="comparison-list" aria-label="场景视频对比">
-      <section class="scene-card" data-scene="appalling_river_10">
-        <header class="scene-header">
-          <div class="scene-identity"><span class="scene-index">01</span><div><h2>appalling_river_10</h2><p>AiMDoom Hard · 400 steps</p></div></div>
-          <div class="pair-actions"><button type="button" class="pair-play">同步播放</button><button type="button" class="pair-reset">归零</button></div>
-        </header>
-        <div class="video-grid">
-          <article class="video-panel simple-panel"><div class="panel-heading"><span>别人的</span><small>Others</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/appalling_river_10_simple.jpg" src="assets/videos/appalling_river_10_simple.mp4" aria-label="appalling river 10 别人的方法视频"></video></article>
-          <article class="video-panel hard-panel"><div class="panel-heading"><span>我们的</span><small>Ours</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/appalling_river_10_hard.jpg" src="assets/videos/appalling_river_10_hard.mp4" aria-label="appalling river 10 我们的方法视频"></video></article>
-        </div>
-      </section>
-
-      <section class="scene-card" data-scene="blood_oh_my_oh_my_0">
-        <header class="scene-header">
-          <div class="scene-identity"><span class="scene-index">02</span><div><h2>blood_oh_my_oh_my_0</h2><p>AiMDoom Hard · 400 steps</p></div></div>
-          <div class="pair-actions"><button type="button" class="pair-play">同步播放</button><button type="button" class="pair-reset">归零</button></div>
-        </header>
-        <div class="video-grid">
-          <article class="video-panel simple-panel"><div class="panel-heading"><span>别人的</span><small>Others</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/blood_oh_my_oh_my_0_simple.jpg" src="assets/videos/blood_oh_my_oh_my_0_simple.mp4" aria-label="blood oh my oh my 0 别人的方法视频"></video></article>
-          <article class="video-panel hard-panel"><div class="panel-heading"><span>我们的</span><small>Ours</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/blood_oh_my_oh_my_0_hard.jpg" src="assets/videos/blood_oh_my_oh_my_0_hard.mp4" aria-label="blood oh my oh my 0 我们的方法视频"></video></article>
-        </div>
-      </section>
-
-      <section class="scene-card" data-scene="eerie_citadel_3">
-        <header class="scene-header">
-          <div class="scene-identity"><span class="scene-index">03</span><div><h2>eerie_citadel_3</h2><p>AiMDoom Hard · 400 steps</p></div></div>
-          <div class="pair-actions"><button type="button" class="pair-play">同步播放</button><button type="button" class="pair-reset">归零</button></div>
-        </header>
-        <div class="video-grid">
-          <article class="video-panel simple-panel"><div class="panel-heading"><span>别人的</span><small>Others</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/eerie_citadel_3_simple.jpg" src="assets/videos/eerie_citadel_3_simple.mp4" aria-label="eerie citadel 3 别人的方法视频"></video></article>
-          <article class="video-panel hard-panel"><div class="panel-heading"><span>我们的</span><small>Ours</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/eerie_citadel_3_hard.jpg" src="assets/videos/eerie_citadel_3_hard.mp4" aria-label="eerie citadel 3 我们的方法视频"></video></article>
-        </div>
-      </section>
-
-      <section class="scene-card" data-scene="esselfortiums_warzone_2">
-        <header class="scene-header">
-          <div class="scene-identity"><span class="scene-index">04</span><div><h2>esselfortiums_warzone_2</h2><p>AiMDoom Hard · 400 steps</p></div></div>
-          <div class="pair-actions"><button type="button" class="pair-play">同步播放</button><button type="button" class="pair-reset">归零</button></div>
-        </header>
-        <div class="video-grid">
-          <article class="video-panel simple-panel"><div class="panel-heading"><span>别人的</span><small>Others</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/esselfortiums_warzone_2_simple.jpg" src="assets/videos/esselfortiums_warzone_2_simple.mp4" aria-label="esselfortiums warzone 2 别人的方法视频"></video></article>
-          <article class="video-panel hard-panel"><div class="panel-heading"><span>我们的</span><small>Ours</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/esselfortiums_warzone_2_hard.jpg" src="assets/videos/esselfortiums_warzone_2_hard.mp4" aria-label="esselfortiums warzone 2 我们的方法视频"></video></article>
-        </div>
-      </section>
-
-      <section class="scene-card" data-scene="fear_in_the_abyss_10">
-        <header class="scene-header">
-          <div class="scene-identity"><span class="scene-index">05</span><div><h2>fear_in_the_abyss_10</h2><p>AiMDoom Hard · 400 steps</p></div></div>
-          <div class="pair-actions"><button type="button" class="pair-play">同步播放</button><button type="button" class="pair-reset">归零</button></div>
-        </header>
-        <div class="video-grid">
-          <article class="video-panel simple-panel"><div class="panel-heading"><span>别人的</span><small>Others</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/fear_in_the_abyss_10_hard.jpg" src="assets/videos/fear_in_the_abyss_10_hard.mp4" aria-label="fear in the abyss 10 别人的方法视频"></video></article>
-          <article class="video-panel hard-panel"><div class="panel-heading"><span>我们的</span><small>Ours</small></div><video controls muted playsinline preload="metadata" poster="assets/posters/fear_in_the_abyss_10_simple.jpg" src="assets/videos/fear_in_the_abyss_10_simple.mp4" aria-label="fear in the abyss 10 我们的方法视频"></video></article>
-        </div>
-      </section>
-    </main>
-
-    <footer><p>NextBestPath · Others vs Ours · AiMDoom Hard</p></footer>
+<a class="skip-link" href="#overview">Skip to content</a>
+<nav class="navbar" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="navbar-item home-link" href="#top" aria-label="Project home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5M5 9v12h5v-7h4v7h5V9"/></svg></a>
+    <details class="related-projects"><summary>Related Projects <span aria-hidden="true">⌄</span></summary>
+      <div class="related-menu"><a href="https://shiyao-li.github.io/nbp/" target="_blank" rel="noopener">NextBestPath — ICLR 2025</a><a href="https://anttwo.github.io/MACARONS/" target="_blank" rel="noopener">MACARONS — CVPR 2023</a><a href="https://github.com/shiyao-li/AiMDoom" target="_blank" rel="noopener">AiMDoom Dataset and Toolkit</a></div>
+    </details>
   </div>
-  <script src="app.js"></script>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-body"><div class="container is-max-desktop"><div class="columns is-centered"><div class="column has-text-centered">
+    <h1 class="title is-1 publication-title"><span class="depth">All Roads Lead to Rome</span></h1>
+    <h2 class="title is-2 publication-title project-subtitle">Flow-driven Multi-Anchor Exploration<br class="desktop-break"> for Open-Environment Active 3D Mapping</h2>
+    <div class="publication-authors is-size-5">Anonymous Authors</div>
+    <div class="venue"><strong>NeurIPS 2026 Submission</strong></div>
+    <div class="publication-links">
+      <a class="button is-normal is-rounded is-dark" href="assets/paper/paper.pdf" target="_blank" rel="noopener"><span class="button-icon" aria-hidden="true">▤</span><span>Paper</span></a>
+      <a class="button is-normal is-rounded is-dark" href="#architecture"><span class="button-icon" aria-hidden="true">◇</span><span>Method</span></a>
+      <a class="button is-normal is-rounded is-dark" href="#comparisons"><span class="button-icon" aria-hidden="true">▶</span><span>Videos</span></a>
+    </div>
+  </div></div></div></div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop"><div class="hero-body">
+    <figure class="teaser-comparison">
+      <a class="figure-link" href="assets/images/fear_in_the_abyss_10_low_view_no_text_5K.png" target="_blank" rel="noopener" aria-label="Open the full-resolution reconstruction and Ground Truth comparison">
+        <img src="assets/images/fear_in_the_abyss_10_low_view_no_text_5K.png" width="5120" height="1480" fetchpriority="high" alt="fear_in_the_abyss_10, matching low-angle cameras and roof cutaways. Left: actual Simple-trained NBP reconstruction and recorded trajectory, with 70.04 percent measured coverage. Right: complete Ground Truth scene with recorded and illustrative orthogonal room routes, not an exploration result.">
+      </a>
+    </figure>
+    <h2 class="subtitle has-text-centered tagline"><strong>Preserving multiple exploration hypotheses for efficient active 3D mapping in unseen environments.</strong></h2>
+  </div></div>
+</section>
+
+<section class="section" id="overview"><div class="container is-max-desktop">
+  <h2 class="title is-3 has-text-centered">Overview</h2>
+  <div class="content has-text-justified overview-copy"><ul>
+    <li>We study active 3D mapping in open environments, where partial observations and scene shifts make a single long-horizon goal difficult to predict reliably.</li>
+    <li>We formulate exploration as conditional multimodal anchor generation. Conditional Flow Matching preserves multiple plausible goals, while obstacle-aware planning converts them into executable paths.</li>
+    <li>Exploration-mode clustering reduces redundant candidates. Hierarchical selection chooses an exploration mode and reranks its paths to produce the next trajectory.</li>
+  </ul></div>
+</div></section>
+
+<section class="section" id="motivation"><div class="container is-max-desktop has-text-centered">
+  <h2 class="title is-3">Motivation</h2>
+  <figure><a class="figure-link" href="assets/images/motivation.svg" target="_blank" rel="noopener" aria-label="Open the full-resolution motivation figure"><img src="assets/images/motivation.png" width="3980" height="2370" loading="lazy" alt="Single-point regression commits to a familiar branch, while multimodal anchor modeling preserves alternative exploration hypotheses under scene shift"></a>
+  <figcaption class="subtitle figure-caption">Under partial observability, similar local observations can support multiple plausible futures. Multimodal anchor modeling preserves these alternatives before planning, allowing the agent to explore informative branches in unseen scenes.</figcaption></figure>
+  <div class="figure-downloads"><a href="assets/images/motivation.png" download>High-resolution PNG</a><span> / </span><a href="assets/images/motivation.svg" download>SVG</a></div>
+</div></section>
+
+<section class="section" id="architecture"><div class="container is-max-desktop has-text-centered">
+  <h2 class="title is-3">Architecture</h2>
+  <figure><a class="figure-link" href="assets/images/architecture.svg" target="_blank" rel="noopener" aria-label="Open the full-resolution architecture figure"><img src="assets/images/architecture.png" width="4000" height="1160" loading="lazy" alt="Mapping state encoder, conditional flow matching anchors, obstacle-aware planning and clustering, and hierarchical trajectory selection"></a>
+  <figcaption class="subtitle figure-caption">A mapping-progress encoder summarizes the current state. Conditional Flow Matching samples long-horizon anchors, which become feasible candidate paths through obstacle-aware planning. Clustering groups similar paths into exploration modes, and hierarchical selection produces the final executable trajectory.</figcaption></figure>
+  <div class="figure-downloads"><a href="assets/images/architecture.png" download>High-resolution PNG</a><span> / </span><a href="assets/images/architecture.svg" download>SVG</a></div>
+</div></section>
+
+<section class="section" id="flow-matching"><div class="container is-max-desktop has-text-centered">
+  <h2 class="title is-3">Conditional Flow Matching</h2>
+  <figure><a class="figure-link" href="assets/images/flow-matching.svg" target="_blank" rel="noopener"><img class="flow-figure" src="assets/images/flow-matching.png" width="3300" height="1220" loading="lazy" alt="Conditional flow transports Gaussian samples to several plausible long-horizon anchor modes conditioned on the mapping state"></a>
+  <figcaption class="subtitle figure-caption">Conditioned on the current mapping state, a learned flow transports samples from a Gaussian prior to a multimodal distribution of coarse exploration anchors. Modeling position and orientation in a compact anchor space leaves detailed geometric feasibility to the planner.</figcaption></figure>
+</div></section>
+
+<section class="section" id="evaluation"><div class="container is-max-desktop has-text-centered">
+  <h2 class="title is-3">Evaluation Results</h2>
+  <p class="results-intro">Our method achieves improved reconstruction coverage and exploration efficiency on the AiMDoom and Matterport3D benchmarks.</p>
+  <div class="table-container"><table class="table is-fullwidth results-table">
+    <caption>AiMDoom final surface coverage ↑ · Table 1 in the supplied manuscript</caption>
+    <thead><tr><th scope="col">Method</th><th scope="col">Simple</th><th scope="col">Normal</th><th scope="col">Hard</th><th scope="col">Insane</th></tr></thead>
+    <tbody><tr><th scope="row">NextBestPath</th><td>0.879 ± 0.142</td><td>0.734 ± 0.142</td><td>0.618 ± 0.153</td><td>0.472 ± 0.095</td></tr><tr class="ours-row"><th scope="row">Our method</th><td><strong>0.913 ± 0.138</strong></td><td><strong>0.781 ± 0.125</strong></td><td><strong>0.662 ± 0.139</strong></td><td><strong>0.534 ± 0.073</strong></td></tr></tbody>
+  </table></div>
+  <div class="columns result-columns">
+    <div class="column"><div class="table-container"><table class="table is-fullwidth results-table"><caption>Matterport3D · Table 2</caption><thead><tr><th>Method</th><th>Comp. (%) ↑</th><th>Comp. (cm) ↓</th></tr></thead><tbody><tr><th>NextBestPath</th><td>79.38</td><td>6.78</td></tr><tr class="ours-row"><th>Our method</th><td><strong>82.67</strong></td><td><strong>5.67</strong></td></tr></tbody></table></div></div>
+    <div class="column"><div class="table-container"><table class="table is-fullwidth results-table"><caption>AiMDoom → Matterport3D transfer · Table 3</caption><thead><tr><th>Method</th><th>Comp. (%) ↑</th><th>Comp. (cm) ↓</th></tr></thead><tbody><tr><th>NextBestPath</th><td>61.81</td><td>10.22</td></tr><tr class="ours-row"><th>Our method</th><td><strong>68.45</strong></td><td><strong>9.11</strong></td></tr></tbody></table></div></div>
+  </div>
+</div></section>
+
+<section class="section comparison-heading" id="comparisons"><div class="container is-max-desktop has-text-centered"><h2 class="title is-3">More Comparisons</h2><p class="subtitle">Active mapping in two Hard scenes</p></div></section>
+<section class="hero is-light is-small comparison-section"><div class="hero-body"><div class="container comparison-container">
+  <article class="comparison-pair" data-pair="appalling_river_10">
+    <h3 class="scene-title">appalling_river_10</h3>
+    <div class="columns">
+      <div class="column"><video id="river-simple" controls autoplay muted playsinline loop preload="auto" poster="assets/images/appalling_river_10_simple_weight_final.jpg" aria-label="Previous state of the art, appalling_river_10"><source src="assets/videos/appalling_river_10_simple_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Previous state of the art</p></div>
+      <div class="column"><video id="river-hard" controls autoplay muted playsinline loop preload="auto" poster="assets/images/appalling_river_10_hard_weight_final.jpg" aria-label="Our method, appalling_river_10"><source src="assets/videos/appalling_river_10_hard_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Our method</p></div>
+    </div>
+    <div class="pair-controls"><button type="button" data-action="play">Play both</button><button type="button" data-action="pause">Pause</button><button type="button" data-action="restart">Restart</button><span>400 steps · 25 seconds · matched cameras</span></div>
+  </article>
+  <article class="comparison-pair" data-pair="butcher_in_the_sandstorm_15">
+    <h3 class="scene-title">butcher_in_the_sandstorm_15</h3>
+    <div class="columns">
+      <div class="column"><video id="butcher-simple" controls autoplay muted playsinline loop preload="auto" poster="assets/images/butcher_in_the_sandstorm_15_simple_weight_final.jpg" aria-label="Previous state of the art, butcher_in_the_sandstorm_15"><source src="assets/videos/butcher_in_the_sandstorm_15_simple_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Previous state of the art</p></div>
+      <div class="column"><video id="butcher-hard" controls autoplay muted playsinline loop preload="auto" poster="assets/images/butcher_in_the_sandstorm_15_hard_weight_final.jpg" aria-label="Our method, butcher_in_the_sandstorm_15"><source src="assets/videos/butcher_in_the_sandstorm_15_hard_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Our method</p></div>
+    </div>
+    <div class="pair-controls"><button type="button" data-action="play">Play both</button><button type="button" data-action="pause">Pause</button><button type="button" data-action="restart">Restart</button><span>400 steps · 25 seconds · matched cameras</span></div>
+  </article>
+</div></div></section>
+
+<section class="section" id="BibTeX"><div class="container is-max-desktop content">
+  <div class="citation-title"><h2 class="title is-3">BibTeX</h2><button id="copy-bibtex" type="button">Copy</button></div>
+  <pre><code id="bibtex">@misc{anonymous2026allroads,
+  title = {All Roads Lead to Rome: Flow-driven Multi-Anchor
+           Exploration for Open-Environment Active 3D Mapping},
+  author = {Anonymous Authors},
+  year = {2026},
+  note = {Manuscript submitted to NeurIPS 2026}
+}</code></pre>
+  <p class="citation-note">Anonymous submission metadata, as provided in the manuscript.</p>
+</div></section>
+</main>
+<footer><p>Website layout adapted from <a href="https://shiyao-li.github.io/nbp/" target="_blank" rel="noopener">NextBestPath</a> and the <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">Nerfies project page template</a>.</p></footer>
 </body>
 </html>

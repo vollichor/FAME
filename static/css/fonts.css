@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/project-font-0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/project-font-1.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/project-font-2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/project-font-3.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url(../fonts/project-font-4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  src: url(../fonts/project-font-5.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  src: url(../fonts/project-font-6.ttf) format('truetype');
+}

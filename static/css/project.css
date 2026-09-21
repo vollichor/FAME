@@ -1,0 +1,74 @@
+/* The reference page's Bulma layout, typography and gradient title are retained. */
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{color:#4a4a4a;background:#fff;font-family:'Noto Sans',Arial,sans-serif}
+.container.is-max-desktop{max-width:1100px!important}
+.publication-title,.publication-authors,.teaser{font-family:'Google Sans','Noto Sans',Arial,sans-serif}
+.nav-inner{display:flex;justify-content:center;align-items:center;width:100%;min-height:52px;gap:7px}
+.home-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.related-projects{position:relative;font-size:16px;text-align:left}
+.related-projects summary{list-style:none;cursor:pointer;padding:12px;color:#4a4a4a}
+.related-projects summary::-webkit-details-marker{display:none}
+.related-projects summary span{color:#3273dc;margin-left:10px}
+.related-menu{position:absolute;left:0;top:100%;z-index:5;background:white;border-top:2px solid #eee;box-shadow:0 8px 14px #00000014;border-radius:0 0 5px 5px;min-width:265px;padding:8px 0}
+.related-menu a{display:block;padding:8px 18px;color:#4a4a4a;white-space:nowrap}
+.related-menu a:hover{background:#f5f5f5}
+.hero-body{padding:3rem 1.5rem}
+.publication-title.is-1{font-size:3rem;font-weight:600;line-height:1.125;margin-bottom:1.5rem}
+.project-subtitle{font-size:2.5rem!important;font-weight:600;line-height:1.2;margin-bottom:25px!important}
+.publication-authors{color:#209cee;margin-top:12px}
+.venue{margin:17px 0 20px;font-size:20px;color:#363636}
+.publication-links{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+.publication-links .button{font-size:16px;gap:8px;margin:5px 0;padding-left:19px;padding-right:19px;text-decoration:none}
+.button-icon{font-size:17px;line-height:1}
+.teaser .hero-body{padding-top:0;padding-bottom:3rem}
+.teaser-pair img{width:100%;height:auto;display:block}
+.teaser-label{font-size:19px;text-align:center;margin-top:15px}
+.tagline{font-size:20px;line-height:1.5;margin-top:23px!important;margin-bottom:12px!important}
+.section{padding:3rem 1.5rem}
+.section .title.is-3{font-size:2rem;margin-bottom:1.5rem;color:#363636}
+.overview-copy{font-size:18px;line-height:1.7}
+.overview-copy li+li{margin-top:9px}
+figure{margin:0}
+.figure-link{display:block}
+.figure-link img{display:block;width:100%;height:auto;transition:opacity .18s}
+.figure-link:hover img{opacity:.95}
+.figure-caption{font-size:17px!important;line-height:1.6!important;margin:18px auto 0!important;color:#4a4a4a}
+.figure-downloads{font-size:13px;margin-top:10px;color:#999}
+.flow-figure{max-width:930px;margin:0 auto}
+.results-intro{font-size:18px;line-height:1.6;margin-bottom:24px}
+.results-table{font-size:15px;border-collapse:collapse;background:white}
+.results-table caption{caption-side:top;text-align:center;color:#555;font-size:15px;padding-bottom:13px}
+.results-table th,.results-table td{text-align:center!important;white-space:nowrap;padding:13px 10px;border-color:#ddd}
+.results-table th:first-child{text-align:left!important}
+.results-table thead{border-top:2px solid #555;border-bottom:1px solid #555}
+.results-table tbody{border-bottom:2px solid #555}
+.ours-row{background:#f4f7fb}
+.result-columns{margin-top:22px}
+.comparison-heading{padding-bottom:1rem}
+.comparison-heading .subtitle{font-size:18px}
+.comparison-container{max-width:1344px!important}
+.comparison-section{background:#f5f5f5!important}
+.comparison-section .hero-body{padding:1.5rem}
+.comparison-pair{margin:4px 0 34px}
+.comparison-pair:last-of-type{margin-bottom:20px}
+.scene-title{font-size:17px;font-weight:500;text-align:center;margin:10px 0 16px;color:#555}
+.comparison-pair video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:white}
+.video-label{font-size:16px;margin-top:10px}
+.pair-controls{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:3px}
+.pair-controls button,#copy-bibtex{border:1px solid #ccc;border-radius:4px;background:white;color:#555;font:inherit;font-size:13px;padding:5px 12px;cursor:pointer}
+.pair-controls button:hover,#copy-bibtex:hover{border-color:#3273dc;color:#3273dc}
+.pair-controls span{color:#777;font-size:12px;margin-left:8px}
+.media-note{font-size:12px;line-height:1.6;text-align:center;max-width:890px;margin:14px auto 0;color:#737373}
+.comparison-provenance{max-width:990px;margin-top:20px}
+.citation-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.citation-title h2{margin-bottom:0!important}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;border-radius:0;padding:22px;background:#f5f5f5}
+pre code{font-size:14px;color:#4a4a4a}
+.citation-note{font-size:12px;color:#888}
+footer{padding:35px 24px 48px;text-align:center;font-size:12px;color:#aaa}
+footer a{color:#999;text-decoration:none}
+.skip-link{position:absolute;top:-80px;left:12px;z-index:10;background:#363636;color:white;padding:12px}
+.skip-link:focus{top:8px}
+:focus-visible{outline:3px solid #78a9ee;outline-offset:4px}
+@media(max-width:768px){.hero-body{padding:2.1rem 1.1rem}.publication-title.is-1{font-size:2.35rem}.project-subtitle{font-size:1.65rem!important}.desktop-break{display:none}.section{padding:2.2rem 1.1rem}.teaser .hero-body{padding:0 1.1rem 1.8rem}.teaser-pair{display:flex;gap:8px}.teaser-pair .column{width:50%;padding:0}.teaser-label{font-size:13px}.tagline{font-size:18px}.overview-copy{font-size:16px;text-align:left!important}.figure-caption{font-size:15px!important}.results-table{font-size:13px}.results-table th,.results-table td{padding:9px}.comparison-section .hero-body{padding:1rem}.comparison-pair .columns{display:flex;gap:8px;margin:0}.comparison-pair .column{min-width:0;width:50%;padding:0}.video-label{font-size:13px;line-height:1.4}.pair-controls span{width:100%;text-align:center;margin:0}.scene-title{overflow-wrap:anywhere}.section .title.is-3{font-size:1.65rem}.media-note{font-size:11px}.publication-authors{font-size:18px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
