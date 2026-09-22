@@ -6,6 +6,10 @@ All four videos start muted automatically at 2× speed when the page opens and l
 
 ## GitHub Pages
 
+Published website: https://vollichor.github.io/FAME/
+
+Repository: https://github.com/vollichor/FAME
+
 1. Upload the **contents** of this folder to the root of a GitHub repository. Keep `index.html`, `assets`, and `static` at the same level.
 2. In the repository, open **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**, then `main` and `/ (root)`, and save.
