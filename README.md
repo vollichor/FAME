@@ -17,7 +17,7 @@ The ZIP contains the complete deployable website. `_qa` is a local validation di
 
 - Paper title, method descriptions and Tables 1–3: supplied `4774_All_Roads_Lead_to_Rome_Fl.pdf`.
 - Figures: high-resolution crops of Figures 1–3, plus original embedded images from `NeurIPS2026-demo.pptx`. PNG exports retain sharp text. SVG preserves source vectors and embedded images, not vector detail that did not exist in the source.
-- Author names are not provided. The page uses Anonymous Authors and correctly labels the document as a NeurIPS 2026 submission.
+- Website author names and affiliations were supplied by the user: Yang Li (2), Aming WU (1), Zihao Zhang (2), Ziju Han (2), Sijia Zhang (2), Yahong Han (2). Affiliation 1 is Hefei University of Technology; affiliation 2 is Tianjin University. The supplied PDF is unchanged, and the page continues to label the document as a NeurIPS 2026 submission.
 - Benchmark numbers reproduce the manuscript and are not new independently validated experiments.
 - The selected videos are existing NextBestPath Simple/Hard checkpoint runs. They are **not** a validated comparison between NextBestPath and the paper's proposed flow-driven method. The requested visible column labels are presentation labels; actual checkpoint provenance is documented here. Replace those files when genuine method-comparison runs are available.
 - The Evaluation Results section displays the user-supplied original screenshot, `assets/images/evaluation-results-tables.png`, without resampling.

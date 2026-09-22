@@ -15,7 +15,12 @@ body{color:#4a4a4a;background:#fff;font-family:'Noto Sans',Arial,sans-serif}
 .hero-body{padding:3rem 1.5rem}
 .publication-title.is-1{font-size:3rem;font-weight:600;line-height:1.125;margin-bottom:1.5rem}
 .project-subtitle{font-size:2.5rem!important;font-weight:600;line-height:1.2;margin-bottom:25px!important}
-.publication-authors{color:#209cee;margin-top:12px}
+.publication-authors{color:#209cee;margin-top:12px;display:flex;justify-content:center;flex-wrap:wrap;column-gap:24px;row-gap:8px;line-height:1.5}
+.publication-authors .author-block{white-space:nowrap}
+.publication-authors sup{color:#4a4a4a;margin-left:2px}
+.publication-affiliations{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 28px;font-family:'Google Sans','Noto Sans',Arial,sans-serif;color:#4a4a4a;line-height:1.5;margin:0 0 20px}
+.affiliation-block sup{margin-right:3px}
+@media(max-width:768px){.publication-authors{column-gap:16px}.publication-affiliations{font-size:16px!important;gap:5px 18px}}
 .venue{margin:17px 0 20px;font-size:20px;color:#363636}
 .publication-links{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
 .publication-links .button{font-size:16px;gap:8px;margin:5px 0;padding-left:19px;padding-right:19px;text-decoration:none}
