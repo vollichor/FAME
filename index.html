@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/fonts.css">
-  <link rel="stylesheet" href="static/css/project.css">
-  <script src="static/js/project.js" defer></script>
+  <link rel="stylesheet" href="static/css/project.css?v=20260922">
+  <script src="static/js/project.js?v=20260922" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#overview">Skip to content</a>
@@ -45,6 +45,7 @@
       <a class="figure-link" href="assets/images/fear_in_the_abyss_10_low_view_no_text_5K.png" target="_blank" rel="noopener" aria-label="Open the full-resolution reconstruction and Ground Truth comparison">
         <img src="assets/images/fear_in_the_abyss_10_low_view_no_text_5K.png" width="5120" height="1480" fetchpriority="high" alt="fear_in_the_abyss_10, matching low-angle cameras and roof cutaways. Left: actual Simple-trained NBP reconstruction and recorded trajectory, with 70.04 percent measured coverage. Right: complete Ground Truth scene with recorded and illustrative orthogonal room routes, not an exploration result.">
       </a>
+      <figcaption class="teaser-captions"><p>Left: Previous state of the art: NextBestPath.</p><p>Right: Our method.</p></figcaption>
     </figure>
     <h2 class="subtitle has-text-centered tagline"><strong>Preserving multiple exploration hypotheses for efficient active 3D mapping in unseen environments.</strong></h2>
   </div></div>
@@ -82,15 +83,7 @@
 <section class="section" id="evaluation"><div class="container is-max-desktop has-text-centered">
   <h2 class="title is-3">Evaluation Results</h2>
   <p class="results-intro">Our method achieves improved reconstruction coverage and exploration efficiency on the AiMDoom and Matterport3D benchmarks.</p>
-  <div class="table-container"><table class="table is-fullwidth results-table">
-    <caption>AiMDoom final surface coverage ↑ · Table 1 in the supplied manuscript</caption>
-    <thead><tr><th scope="col">Method</th><th scope="col">Simple</th><th scope="col">Normal</th><th scope="col">Hard</th><th scope="col">Insane</th></tr></thead>
-    <tbody><tr><th scope="row">NextBestPath</th><td>0.879 ± 0.142</td><td>0.734 ± 0.142</td><td>0.618 ± 0.153</td><td>0.472 ± 0.095</td></tr><tr class="ours-row"><th scope="row">Our method</th><td><strong>0.913 ± 0.138</strong></td><td><strong>0.781 ± 0.125</strong></td><td><strong>0.662 ± 0.139</strong></td><td><strong>0.534 ± 0.073</strong></td></tr></tbody>
-  </table></div>
-  <div class="columns result-columns">
-    <div class="column"><div class="table-container"><table class="table is-fullwidth results-table"><caption>Matterport3D · Table 2</caption><thead><tr><th>Method</th><th>Comp. (%) ↑</th><th>Comp. (cm) ↓</th></tr></thead><tbody><tr><th>NextBestPath</th><td>79.38</td><td>6.78</td></tr><tr class="ours-row"><th>Our method</th><td><strong>82.67</strong></td><td><strong>5.67</strong></td></tr></tbody></table></div></div>
-    <div class="column"><div class="table-container"><table class="table is-fullwidth results-table"><caption>AiMDoom → Matterport3D transfer · Table 3</caption><thead><tr><th>Method</th><th>Comp. (%) ↑</th><th>Comp. (cm) ↓</th></tr></thead><tbody><tr><th>NextBestPath</th><td>61.81</td><td>10.22</td></tr><tr class="ours-row"><th>Our method</th><td><strong>68.45</strong></td><td><strong>9.11</strong></td></tr></tbody></table></div></div>
-  </div>
+  <figure class="evaluation-figure"><a class="figure-link" href="assets/images/evaluation-results-tables.png" target="_blank" rel="noopener" aria-label="Open the original evaluation tables screenshot"><img src="assets/images/evaluation-results-tables.png" width="1373" height="839" loading="lazy" alt="Manuscript Tables 1–3: evaluation on AiMDoom, comparison on Matterport3D, and transfer from AiMDoom to Matterport3D."></a></figure>
 </div></section>
 
 <section class="section comparison-heading" id="comparisons"><div class="container is-max-desktop has-text-centered"><h2 class="title is-3">More Comparisons</h2><p class="subtitle">Active mapping in two Hard scenes</p></div></section>
@@ -101,7 +94,7 @@
       <div class="column"><video id="river-simple" controls autoplay muted playsinline loop preload="auto" poster="assets/images/appalling_river_10_simple_weight_final.jpg" aria-label="Previous state of the art, appalling_river_10"><source src="assets/videos/appalling_river_10_simple_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Previous state of the art</p></div>
       <div class="column"><video id="river-hard" controls autoplay muted playsinline loop preload="auto" poster="assets/images/appalling_river_10_hard_weight_final.jpg" aria-label="Our method, appalling_river_10"><source src="assets/videos/appalling_river_10_hard_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Our method</p></div>
     </div>
-    <div class="pair-controls"><button type="button" data-action="play">Play both</button><button type="button" data-action="pause">Pause</button><button type="button" data-action="restart">Restart</button><span>400 steps · 25 seconds · matched cameras</span></div>
+    <p class="pair-meta">400 steps · 2× playback · matched cameras</p>
   </article>
   <article class="comparison-pair" data-pair="butcher_in_the_sandstorm_15">
     <h3 class="scene-title">butcher_in_the_sandstorm_15</h3>
@@ -109,22 +102,10 @@
       <div class="column"><video id="butcher-simple" controls autoplay muted playsinline loop preload="auto" poster="assets/images/butcher_in_the_sandstorm_15_simple_weight_final.jpg" aria-label="Previous state of the art, butcher_in_the_sandstorm_15"><source src="assets/videos/butcher_in_the_sandstorm_15_simple_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Previous state of the art</p></div>
       <div class="column"><video id="butcher-hard" controls autoplay muted playsinline loop preload="auto" poster="assets/images/butcher_in_the_sandstorm_15_hard_weight_final.jpg" aria-label="Our method, butcher_in_the_sandstorm_15"><source src="assets/videos/butcher_in_the_sandstorm_15_hard_weight.mp4" type="video/mp4"></video><p class="has-text-centered video-label">Our method</p></div>
     </div>
-    <div class="pair-controls"><button type="button" data-action="play">Play both</button><button type="button" data-action="pause">Pause</button><button type="button" data-action="restart">Restart</button><span>400 steps · 25 seconds · matched cameras</span></div>
+    <p class="pair-meta">400 steps · 2× playback · matched cameras</p>
   </article>
 </div></div></section>
 
-<section class="section" id="BibTeX"><div class="container is-max-desktop content">
-  <div class="citation-title"><h2 class="title is-3">BibTeX</h2><button id="copy-bibtex" type="button">Copy</button></div>
-  <pre><code id="bibtex">@misc{anonymous2026allroads,
-  title = {All Roads Lead to Rome: Flow-driven Multi-Anchor
-           Exploration for Open-Environment Active 3D Mapping},
-  author = {Anonymous Authors},
-  year = {2026},
-  note = {Manuscript submitted to NeurIPS 2026}
-}</code></pre>
-  <p class="citation-note">Anonymous submission metadata, as provided in the manuscript.</p>
-</div></section>
 </main>
-<footer><p>Website layout adapted from <a href="https://shiyao-li.github.io/nbp/" target="_blank" rel="noopener">NextBestPath</a> and the <a href="https://github.com/nerfies/nerfies.github.io" target="_blank" rel="noopener">Nerfies project page template</a>.</p></footer>
 </body>
 </html>

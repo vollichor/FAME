@@ -1,4 +1,4 @@
-// Pairwise transport controls keep the same scene at the same exploration time.
+// Keep each comparison synchronized with muted, looping 2x autoplay.
 document.querySelectorAll('[data-pair]').forEach(pair => {
   const videos = [...pair.querySelectorAll('video')];
   let lock = false;
@@ -19,6 +19,14 @@ document.querySelectorAll('[data-pair]').forEach(pair => {
     // Muted inline playback is allowed by standard browser autoplay policies.
     v.muted = true;
     v.defaultMuted = true;
+    v.loop = true;
+    v.autoplay = true;
+    const setPlaybackSpeed = () => {
+      v.defaultPlaybackRate = 2;
+      v.playbackRate = 2;
+    };
+    setPlaybackSpeed();
+    v.addEventListener('loadedmetadata', setPlaybackSpeed);
     v.addEventListener('play',()=>synchronize(v,'play'));
     v.addEventListener('pause',()=>synchronize(v,'pause'));
     v.addEventListener('seeking',()=>synchronize(v,'seek'));
@@ -27,22 +35,7 @@ document.querySelectorAll('[data-pair]').forEach(pair => {
   videos[0].addEventListener('timeupdate',()=>{
     if (!videos[0].paused && !videos[1].seeking && Math.abs(videos[0].currentTime-videos[1].currentTime)>.2) synchronize(videos[0],'seek');
   });
-  pair.querySelectorAll('[data-action]').forEach(button => button.addEventListener('click',()=>{
-    const action = button.dataset.action;
-    if (action === 'pause') videos.forEach(v=>v.pause());
-    else {
-      if (action === 'restart') videos.forEach(v=>{v.currentTime=0;});
-      else videos[1].currentTime=videos[0].currentTime;
-      videos.forEach(v=>v.play().catch(()=>{}));
-    }
-  }));
   // Start immediately, including when the comparison section is below the fold.
   // Keep the native controls available if the browser blocks autoplay.
   videos.forEach(v => v.play().catch(() => {}));
-});
-document.querySelector('#copy-bibtex').addEventListener('click',async event=>{
-  const text=document.querySelector('#bibtex').textContent;
-  try { await navigator.clipboard.writeText(text); event.target.textContent='Copied'; }
-  catch { const range=document.createRange();range.selectNodeContents(document.querySelector('#bibtex'));const selection=window.getSelection();selection.removeAllRanges();selection.addRange(range);event.target.textContent='Selected'; }
-  setTimeout(()=>{event.target.textContent='Copy';},2200);
 });
