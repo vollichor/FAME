@@ -41,6 +41,8 @@ figure{margin:0}
 .figure-link{display:block}
 .figure-link img{display:block;width:100%;height:auto;transition:opacity .18s}
 .figure-link:hover img{opacity:.95}
+.evaluation-figure{width:80%;max-width:880px;margin:0 auto}
+@media(max-width:768px){.evaluation-figure{width:100%}}
 .figure-caption{font-size:17px!important;line-height:1.6!important;margin:18px auto 0!important;color:#4a4a4a}
 .figure-downloads{font-size:13px;margin-top:10px;color:#999}
 .flow-figure{max-width:930px;margin:0 auto}
