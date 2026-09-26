@@ -22,7 +22,7 @@ body{color:#4a4a4a;background:#fff;font-family:'Noto Sans',Arial,sans-serif}
 .affiliation-block sup{margin-right:3px}
 @media(max-width:768px){.publication-authors{column-gap:16px}.publication-affiliations{font-size:16px!important;gap:5px 18px}}
 .venue{margin:17px 0 20px;font-size:22px;color:#363636;text-align:center}
-.spotlight-badge{color:#805500;font-weight:700;white-space:nowrap}
+.spotlight-badge{display:inline-block;background:linear-gradient(90deg,#a52341,#ff4500);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:700;white-space:nowrap}
 .publication-links{display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
 .publication-links .button{font-size:16px;gap:8px;margin:5px 0;padding-left:19px;padding-right:19px;text-decoration:none}
 .button-icon{font-size:17px;line-height:1}
