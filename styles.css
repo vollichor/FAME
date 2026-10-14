@@ -5,10 +5,10 @@
   --line: #dfe5ec;
   --surface: rgba(255, 255, 255, 0.94);
   --page: #f3f6f9;
-  --nbp: #087f8c;
-  --nbp-soft: #e7f7f7;
-  --fame: #d9481c;
-  --fame-soft: #fff0e9;
+  --simple: #087f8c;
+  --simple-soft: #e7f7f7;
+  --hard: #d9481c;
+  --hard-soft: #fff0e9;
   --shadow: 0 18px 50px rgba(30, 45, 70, 0.09);
 }
 
@@ -44,7 +44,7 @@ button, video { font: inherit; }
 
 .eyebrow {
   margin: 0 0 14px;
-  color: var(--nbp);
+  color: var(--simple);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -147,8 +147,8 @@ h1 {
 .panel-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 12px; }
 .panel-heading span { font-size: 1rem; font-weight: 800; }
 .panel-heading small { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-.nbp-panel .panel-heading span { color: var(--nbp); }
-.fame-panel .panel-heading span { color: var(--fame); }
+.simple-panel .panel-heading span { color: var(--simple); }
+.hard-panel .panel-heading span { color: var(--hard); }
 
 video {
   display: block;
