@@ -2,12 +2,12 @@ const cards = [...document.querySelectorAll(".scene-card")];
 
 function setupPair(card) {
   const videos = [...card.querySelectorAll("video")];
-  const [simple, hard] = videos;
+  const [nbp, fame] = videos;
   const playButton = card.querySelector(".pair-play");
   const resetButton = card.querySelector(".pair-reset");
   let syncing = false;
 
-  const other = (video) => (video === simple ? hard : simple);
+  const other = (video) => (video === nbp ? fame : nbp);
   const align = (source, target, force = false) => {
     if (force || Math.abs(source.currentTime - target.currentTime) > 0.12) {
       target.currentTime = source.currentTime;
